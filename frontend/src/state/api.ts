@@ -103,7 +103,7 @@ export const api = createApi({
     
               return { data: { user, userSub, userDetails } };
             } catch (error: any) {
-              return { error: error.message || "Could not fetch user data" };
+              return { error: error || "Could not fetch user data" };
             }
           },
         }),
